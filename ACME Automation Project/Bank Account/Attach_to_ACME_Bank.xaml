@@ -1,0 +1,295 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Attach_to_ACME_Bank" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_LastName" Type="InArgument(x:String)" />
+    <x:Property Name="in_FirstName" Type="InArgument(x:String)" />
+    <x:Property Name="in_City_State_Zip" Type="InArgument(x:String)" />
+    <x:Property Name="in_Phone" Type="InArgument(x:String)" />
+    <x:Property Name="in_Email" Type="InArgument(x:String)" />
+    <x:Property Name="in_Age" Type="InArgument(x:String)" />
+    <x:Property Name="in_No_Dependants" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Attach_to_ACME_Bank.in_FirstName>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Attach_to_ACME_Bank.in_FirstName>
+  <this:Attach_to_ACME_Bank.in_City_State_Zip>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Attach_to_ACME_Bank.in_City_State_Zip>
+  <this:Attach_to_ACME_Bank.in_Phone>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Attach_to_ACME_Bank.in_Phone>
+  <this:Attach_to_ACME_Bank.in_Email>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Attach_to_ACME_Bank.in_Email>
+  <this:Attach_to_ACME_Bank.in_Age>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Attach_to_ACME_Bank.in_Age>
+  <this:Attach_to_ACME_Bank.in_No_Dependants>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Attach_to_ACME_Bank.in_No_Dependants>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>887.2,2729.6</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Attach_to_ACME_Bank_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="60">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Callout.Activity</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Attach_to_ACME_Bank" sap:VirtualizedContainerService.HintSize="475.2,2664.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: ACME System 1 - Add Account" sap:VirtualizedContainerService.HintSize="433.6,2572" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="368e9c1b-882a-47d0-b51b-6aa2f527c5c7" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,2355.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'First Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,255.2" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="368e9c1b-882a-47d0-b51b-6aa2f527c5c7" Text="[in_FirstName]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/bank/account" DesignTimeRectangle="334, 460, 606, 43" ElementType="InputBox" FriendlyName="'INPUT firstname'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='' /&gt;" Guid="b80ac47d-35c1-4d03-8dd7-3dea8aa4f798" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAmIAAAAvCAYAAABAD6Z9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIBSURBVHhe7dq7juJQFETR+f9vgxBETgAJOAHx5o6qhS2YFgntnpOsJVVgY/Kta/9pAACUEGIAAEWEGABAkW8httls2mKxaNPptE0mEzMzMzP7wdJUaas01r9eQmy5XLbZbNZWq1Xbbret6zozMzMz+8HSVGmrNFZa69kQYqm0PJA/7Pf7djgc2vF4bKfTyczMzMw+WFoqTZW2SmOltZ5PxoYQy5HZer3+evh6vbb7/W5mZmZmIyxtlcZKa6W5ekOI5f3lbrdrt9vtcQcAgLGksXIylubqDSGWj8lyhJZqAwBgXGmstFaaq/cSYpfL5XEFAMDY0lpvQyzvLwEA+B1pLSEGAFBAiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABR5G2LT6bSdz+fHFQAAY0trpbl6Q4gtFou22WweVwAAjC2tlebqDSGWH+bzudeTAAC/II2V1no++BpCLJbL5dcDXde12+32uAsAwKfSVGmrNFZa69lLiEV/ZJb3l/mYzMzMzMw+X5rq3Sdg30IMAID/obW/1tWr2GU4D1kAAAAASUVORK5CYII=" InformativeScreenshot="94f9219a7e3919638fb2b6ee5feb4d22.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Add Account' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
+                      <uix:Target DesignTimeRectangle="334, 429, 96, 25" ElementType="Text" FriendlyName="'First Name'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' aaname='First Name:' check:text='First Name:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGQAAAAdCAYAAABcz8ldAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIQSURBVGhD7ZVhkoMgDIX3Tp6rXsXpTexJOh6jM70DiwrkQYLdVuxmt3kz74eAIeSL+OVMqmRAlMmAKJMBUSYDokwGRJkMiDIZEGUiILfR9V3nui2fp3XtdQhjvRtv61Ab3d146lx/uYfnitL+kBNoOoe50+gj/i0pAjK5IezzFBAhh88DcoheBeJdFP7fARmuYawm9oVgMafl2qnNkwc/GlQWOLiah7Ae19aA3C89ey+DX9QgxZkdYxWNy5tnvXbTe97sHJB/OdccSOblEJW5xQFKAyAIWAIiwYhORX10S5x6cZ7yrJ81A/csENHYbZtAijudrfWCvShRisG7rhDGvPJYHAjFpgJAJ4vdHwEXHR+vbeEM9EVRc1AjyDfC8UDK/wxsniXF9CIQvz8VonjGnFFZTrBObBQsKjQVglrOXMtfaoa6mgPhxeR3qrzudSD47pznKAEpIaAFIFg8sctLII/q5/3wXF4H/NRrm0LRwLTXHiBYNLBQ6NnrnttX1gcAQQnF2AkkixkdY6f1lYK2APJ0DWQdDkS+f/0b7Ae4F4hXGg9mQOBsuLYJEOlMXlKuUj5Bb/hCaE4yrecdXs1DOmQQFcVb+PpENwKC7zPHNbN+F8iqrFDBbB9IdHb1S9kAkhUlAfEqirXELuPsBbKINxY7x4+AmFTIgCiTAVEmA6JMBkSZDIgyGRBlMiCq5Nw3KxhzI+YjcHoAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                      <uix:Target DesignTimeRectangle="334, 522, 94, 25" ElementType="Text" FriendlyName="'Last Name'" FullSelectorArgument="&lt;webctrl aaname='Last Name:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Last Name:' tag='LABEL' type='' check:text='Last Name:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGIAAAAdCAYAAABR0bkaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIqSURBVGhD7ZThjcMgDIVvp8zVrFJ1k3SSqmNU6g4coYCfjWkjEt35dH6SfyQQY7/P4Su4TMhBGJGDMCIHYUQOwogchBE5CCNyEEZEIB5LmKcpTDHOt/zuB/W8zmE6LeGZn1Xdzqm+FJd7fkm6X/LapzwGZQLEZgMRxDSH5ZHfZzmInRoD0e7/nyBgf8+YeOGE5ST2sEm+hzNby6FcO0kSRAystQciXXviu/kKO0TvNc8aJZfol32f1Pba+Aj1y7UxEBqEEtUEDUKJAmM/iGk6xywvaSA0CCWqme/6WeM0q+vkU6ePGAzY0SBqw2AYNZxNVvNBwfDt5iulNhLPuFH+0mybh86jGmBA1GkvYMUglXphb3MuDAX5Qe+O/yOY5DS0IPh11GoIRMxHBojnXh75RykgcIKb4UoCQAkO9c+mH95v8XMQhDQfg4omoyCUa2cUBKsjfrtoeaT5GAoI7F2dagmCDZweHJCuARD6L6tPzyqxPwcWNw4Cz4VQDF7j1RfU87dB6L9cHwQX/SXU3B4QzJgSJU/d3zHyCBDgxxbDe1JB9GMtCK6Des3gVZVNgivhE7B9IKLgLJZHqwH3HgJCHy61Vq2erAEQeLAW5WBlUjEqRGy4XWPSmstiNVWgOCBKHATirXfYy9EgGpNTQ/ov2pgs1l8ShlUjhd6AYPXj96KvdLbMsxdEUjt4TZ+bQLh+VQ7CiByEETkII3IQRuQgjMhBGJGDMKEQvgFVzbTir8E59gAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Last Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,255.2" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="368e9c1b-882a-47d0-b51b-6aa2f527c5c7" Text="[in_LastName]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/bank/account" DesignTimeRectangle="334, 553, 606, 43" ElementType="InputBox" FriendlyName="'INPUT lastname'" FullSelectorArgument="&lt;webctrl id='lastname' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='lastname' tag='INPUT' type='text' aaname='' /&gt;" Guid="490c4344-753a-41c4-945f-d488ae134c66" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAmIAAAAvCAYAAABAD6Z9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIBSURBVHhe7dq7juJQFETR+f9vgxBETgAJOAHx5o6qhS2YFgntnpOsJVVgY/Kta/9pAACUEGIAAEWEGABAkW8httls2mKxaNPptE0mEzMzMzP7wdJUaas01r9eQmy5XLbZbNZWq1Xbbret6zozMzMz+8HSVGmrNFZa69kQYqm0PJA/7Pf7djgc2vF4bKfTyczMzMw+WFoqTZW2SmOltZ5PxoYQy5HZer3+evh6vbb7/W5mZmZmIyxtlcZKa6W5ekOI5f3lbrdrt9vtcQcAgLGksXIylubqDSGWj8lyhJZqAwBgXGmstFaaq/cSYpfL5XEFAMDY0lpvQyzvLwEA+B1pLSEGAFBAiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQ5G2ITafTdj6fH1cAAIwtrZXm6g0htlgs2mazeVwBADC2tFaaqzeEWH6Yz+deTwIA/II0Vlrr+eBrCLFYLpdfD3Rd12632+MuAACfSlOlrdJYaa1nLyEW/ZFZ3l/mYzIzMzMz+3xpqnefgH0LMQAA/g8hBgBQorW/z8atHNvdTRsAAAAASUVORK5CYII=" InformativeScreenshot="653405a2a7d6d4f72b2a944a4552b404.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Add Account' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="334, 522, 94, 25" ElementType="Text" FriendlyName="'Last Name'" FullSelectorArgument="&lt;webctrl aaname='Last Name:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Last Name:' tag='LABEL' type='' check:text='Last Name:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGIAAAAdCAYAAABR0bkaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIqSURBVGhD7ZThjcMgDIVvp8zVrFJ1k3SSqmNU6g4coYCfjWkjEt35dH6SfyQQY7/P4Su4TMhBGJGDMCIHYUQOwogchBE5CCNyEEZEIB5LmKcpTDHOt/zuB/W8zmE6LeGZn1Xdzqm+FJd7fkm6X/LapzwGZQLEZgMRxDSH5ZHfZzmInRoD0e7/nyBgf8+YeOGE5ST2sEm+hzNby6FcO0kSRAystQciXXviu/kKO0TvNc8aJZfol32f1Pba+Aj1y7UxEBqEEtUEDUKJAmM/iGk6xywvaSA0CCWqme/6WeM0q+vkU6ePGAzY0SBqw2AYNZxNVvNBwfDt5iulNhLPuFH+0mybh86jGmBA1GkvYMUglXphb3MuDAX5Qe+O/yOY5DS0IPh11GoIRMxHBojnXh75RykgcIKb4UoCQAkO9c+mH95v8XMQhDQfg4omoyCUa2cUBKsjfrtoeaT5GAoI7F2dagmCDZweHJCuARD6L6tPzyqxPwcWNw4Cz4VQDF7j1RfU87dB6L9cHwQX/SXU3B4QzJgSJU/d3zHyCBDgxxbDe1JB9GMtCK6Des3gVZVNgivhE7B9IKLgLJZHqwH3HgJCHy61Vq2erAEQeLAW5WBlUjEqRGy4XWPSmstiNVWgOCBKHATirXfYy9EgGpNTQ/ov2pgs1l8ShlUjhd6AYPXj96KvdLbMsxdEUjt4TZ+bQLh+VQ7CiByEETkII3IQRuQgjMhBGJGDMKEQvgFVzbTir8E59gAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'City, State, Zip'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,255.2" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="368e9c1b-882a-47d0-b51b-6aa2f527c5c7" Text="[in_City_State_Zip]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/bank/account" DesignTimeRectangle="334, 645, 606, 43" ElementType="InputBox" FriendlyName="'INPUT city-state-zip'" FullSelectorArgument="&lt;webctrl id='city-state-zip' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='city-state-zip' tag='INPUT' type='text' aaname='' /&gt;" Guid="a9d5c9cf-2790-4843-b130-a9bf16a61eb6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAmIAAAAvCAYAAABAD6Z9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIBSURBVHhe7dq7juJQFETR+f9vgxBETgAJOAHx5o6qhS2YFgntnpOsJVVgY/Kta/9pAACUEGIAAEWEGABAkW8httls2mKxaNPptE0mEzMzMzP7wdJUaas01r9eQmy5XLbZbNZWq1Xbbret6zozMzMz+8HSVGmrNFZa69kQYqm0PJA/7Pf7djgc2vF4bKfTyczMzMw+WFoqTZW2SmOltZ5PxoYQy5HZer3+evh6vbb7/W5mZmZmIyxtlcZKa6W5ekOI5f3lbrdrt9vtcQcAgLGksXIylubqDSGWj8lyhJZqAwBgXGmstFaaq/cSYpfL5XEFAMDY0lpvQyzvLwEA+B1pLSEGAFBAiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABR5G2LT6bSdz+fHFQAAY0trpbl6Q4gtFou22WweVwAAjC2tlebqDSGWH+bzudeTAAC/II2V1no++BpCLJbL5dcDXde12+32uAsAwKfSVGmrNFZa69lLiEV/ZJb3l/mYzMzMzMw+X5rq3Sdg30IMAID/obW/1tWr2GU4D1kAAAAASUVORK5CYII=" InformativeScreenshot="c5ff07a839b698c29950c49b523ca6df.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Add Account' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="334, 614, 126, 25" ElementType="Text" FriendlyName="'City, State, Zip'" FullSelectorArgument="&lt;webctrl aaname='City, State, Zip:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='City, State, Zip:' tag='LABEL' type='' check:text='City, State, Zip:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIIAAAAdCAYAAABmM7RrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMQSURBVGhD7ZbtbdswEIa7k4cq+iNeoSMI3sSZoQMEHiOAd2CoE03etymbVqvmXuCAhJLFu/cenvQjhUJZAUIIFCCEQAFCCBQghEABQggUIIRAAUIIpIPwMaXD4UDj7Zyu5XJVve+Yzp9lbRasT+lS/h2vazq/sfxyHN9FhqDr+1HPv0uXNOVnTx/l38GC3FgdMoqXlt8DxEDQDW6hNZyut8JeBMLnOR1JTixOdNfLqaw/AgLa61uBUE1zw2/wq0HoyRE37X8AwZp0I9VAICeNE7eMx1ti1RRCqDFNfv5Ov8rfwszVRqM9eGNx/jAVaM416sTQrjd49QYhX4hfc4wDn8CO6xQTodUww0IPiZwarSZ5rYLg3QQqhZOG9YCQC/lzS5CN7fXTg+7hw+OBYFyDWHJxQah1G9efEXk288UBwQrsURcID41QkZjR3HofLgw1lQHiymqC8QytrpqjetqQeerEQubXPR+shYtNGQH6HRDUHLW6/xoIKDHf5D61PZRg+d+vS04yN0elZlBdZ6e4WzQP9bvAA4EDaOVpaCMQ0PNLwuqpXKu6Pwtkil6XbD4ODwQXQog+47lqnnNYnjggCHBWHrSB3wjLkgVCu3deb40Y90WMm9v21kBQTUdQbQ0CfaYzUbYAAf9QFoNGUI666RoQcPNPU9lrpWmoWRpArcHtuRIEA8JOELSanxLx/U7THBCGvRpmkZNiBmqwspkNAic/Bx6BXYlTIM3QTr8CgrqWwwXBMN/dhzepqrOemyceCDnUHJEXzX/pMQGBG6IFIVZrXl0rgRLh9Osn0gMhiz9fCZyjgC83RayxUA2FWHLzft9+2wFCRy1LFE+ER/dB0r2QHjMQirQEcUNvUpvHYcKTAV9jyajPsmQAq+XIzSr30Ok356g3jje9GsuglnlvC8J8qGiu0sf1ILxMyBytaWCufKXsWTNw2vfMGFEQntG2IKAToCUOp9R8n+5QALY8feO0NxDECFRO/XyPOtr3qmX64Xf0eO0ahFeekO+mvb4aQv+sAoQQKEAIgQKEUFZKXxNcZ7BVCUbHAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Phone'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,255.2" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="368e9c1b-882a-47d0-b51b-6aa2f527c5c7" Text="[in_Phone]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/bank/account" DesignTimeRectangle="334, 738, 606, 43" ElementType="InputBox" FriendlyName="'INPUT phone'" FullSelectorArgument="&lt;webctrl id='phone' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='phone' tag='INPUT' type='text' aaname='' /&gt;" Guid="b2a5a049-de3a-43eb-ba91-eae02610f844" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAmIAAAAvCAYAAABAD6Z9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIBSURBVHhe7dq7juJQFETR+f9vgxBETgAJOAHx5o6qhS2YFgntnpOsJVVgY/Kta/9pAACUEGIAAEWEGABAkW8httls2mKxaNPptE0mEzMzMzP7wdJUaas01r9eQmy5XLbZbNZWq1Xbbret6zozMzMz+8HSVGmrNFZa69kQYqm0PJA/7Pf7djgc2vF4bKfTyczMzMw+WFoqTZW2SmOltZ5PxoYQy5HZer3+evh6vbb7/W5mZmZmIyxtlcZKa6W5ekOI5f3lbrdrt9vtcQcAgLGksXIylubqDSGWj8lyhJZqAwBgXGmstFaaq/cSYpfL5XEFAMDY0lpvQyzvLwEA+B1pLSEGAFBAiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQ5G2ITafTdj6fH1cAAIwtrZXm6g0htlgs2mazeVwBADC2tFaaqzeEWH6Yz+deTwIA/II0Vlrr+eBrCLFYLpdfD3Rd12632+MuAACfSlOlrdJYaa1nLyEW/ZFZ3l/mYzIzMzMz+3xpqnefgH0LMQAA/g8hBgBQorW/z8atHNvdTRsAAAAASUVORK5CYII=" InformativeScreenshot="eb843482333b688b6dc5163206039d9a.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Add Account' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="334, 707, 59, 25" ElementType="Text" FriendlyName="'Phone'" FullSelectorArgument="&lt;webctrl aaname='Phone:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Phone:' tag='LABEL' type='' check:text='Phone:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD8AAAAdCAYAAAAdO7TiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFLSURBVFhH7ZZtDsIgDIa9E+dyV1m8yXYSs2OY7A6VYYHSAvvI1Gh5k/5YaUqfUtALKFaD16oGr1UNXqsavNNjgM4YMCW7DjBjqNO9x7UOhgf6fkzb4Z31MGG4QngD3Yjn/6/w/R19QRP0uGZuePYJ/AzDFdedkQkJ4jHWfC4vVsN0o/G5JsucovZQp1w7Ab5g9I2oThVp1Or00QaQmpiF6Vy0F75mcuytEdB57NDvC6WnUwD1DU1qiLExZ9w/TkUujuxzGjw9zVJSksf5+TeRKJbEJqdnV/0pv/z82yv6+V45bYfn9zPAs7vIYUtxi/hasVEMdq1Wa2lT8tp45zNq8Ev8Cnwlb23sq/Di+5jeD3/wwavDW0/mwcvWFHyS6wPwqU9Y4SdxDb6ak75PX4d32v8nJ6o05jKnuAab4BWqwWtVg9eqBq9ViuEBnqzzk7ZTk2HpAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DeselectAfter="True" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,255.2" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="368e9c1b-882a-47d0-b51b-6aa2f527c5c7" Text="[in_Email]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/bank/account" DesignTimeRectangle="334, 830, 606, 43" ElementType="InputBox" FriendlyName="'INPUT email'" FullSelectorArgument="&lt;webctrl id='email' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='email' tag='INPUT' type='text' aaname='' /&gt;" Guid="23824ef9-d1dd-4b77-b1ce-81097dca0bba" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAmIAAAAvCAYAAABAD6Z9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIBSURBVHhe7dq7juJQFETR+f9vgxBETgAJOAHx5o6qhS2YFgntnpOsJVVgY/Kta/9pAACUEGIAAEWEGABAkW8httls2mKxaNPptE0mEzMzMzP7wdJUaas01r9eQmy5XLbZbNZWq1Xbbret6zozMzMz+8HSVGmrNFZa69kQYqm0PJA/7Pf7djgc2vF4bKfTyczMzMw+WFoqTZW2SmOltZ5PxoYQy5HZer3+evh6vbb7/W5mZmZmIyxtlcZKa6W5ekOI5f3lbrdrt9vtcQcAgLGksXIylubqDSGWj8lyhJZqAwBgXGmstFaaq/cSYpfL5XEFAMDY0lpvQyzvLwEA+B1pLSEGAFBAiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABR5G2LT6bSdz+fHFQAAY0trpbl6Q4gtFou22WweVwAAjC2tlebqDSGWH+bzudeTAAC/II2V1no++BpCLJbL5dcDXde12+32uAsAwKfSVGmrNFZa69lLiEV/ZJb3l/mYzMzMzMw+X5rq3Sdg30IMAID/obW/1tWr2GU4D1kAAAAASUVORK5CYII=" InformativeScreenshot="88b2578945f392826ac2ff7f416f8520.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Add Account' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="334, 799, 53, 25" ElementType="Text" FriendlyName="'Email'" FullSelectorArgument="&lt;webctrl aaname='Email:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Email:' tag='LABEL' type='' check:text='Email:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADkAAAAdCAYAAAAQJcSlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEFSURBVFhH7ZVhDoMgDIV3J84lVyHeRE9iPIaJd+iCdrUwEBaZbpWXvB9WWN9HMXvADVQhpahCSlGFlKKbQU4daKVAJWwGXH+GWCbqOxjMoqGbsJZQhQz5VMiQSkHmgIwtgjcdzN4BvfbTmsUGxrVMct+vdnpnT3IEg+tU63cpARm0Bt0E6vZAMvZT/29CRh0JqXusUgDrLcS2FqdJvRJBfweSX8NIs8R3NPca33t7syH3dRyS1TgkTdcqEOwNjPsMSPrBHR2CpGdWC92Cf4akKUb2XntdrTFAEUgW1Lm+H0MGDojpEshkLxGQTm21hdim6f/VlIIUrAopRRVSiiqkFN0AEuAJ3nLnMRlP1c0AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Age'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,255.2" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="368e9c1b-882a-47d0-b51b-6aa2f527c5c7" Text="[in_Age]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/bank/account" DesignTimeRectangle="334, 923, 606, 43" ElementType="InputBox" FriendlyName="'INPUT age'" FullSelectorArgument="&lt;webctrl id='age' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='age' tag='INPUT' type='text' aaname='' /&gt;" Guid="8ef14c07-b399-4fd2-9c70-2f96ce23f7a3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAmIAAAAvCAYAAABAD6Z9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIBSURBVHhe7dq7juJQFETR+f9vgxBETgAJOAHx5o6qhS2YFgntnpOsJVVgY/Kta/9pAACUEGIAAEWEGABAkW8httls2mKxaNPptE0mEzMzMzP7wdJUaas01r9eQmy5XLbZbNZWq1Xbbret6zozMzMz+8HSVGmrNFZa69kQYqm0PJA/7Pf7djgc2vF4bKfTyczMzMw+WFoqTZW2SmOltZ5PxoYQy5HZer3+evh6vbb7/W5mZmZmIyxtlcZKa6W5ekOI5f3lbrdrt9vtcQcAgLGksXIylubqDSGWj8lyhJZqAwBgXGmstFaaq/cSYpfL5XEFAMDY0lpvQyzvLwEA+B1pLSEGAFBAiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQ5G2ITafTdj6fH1cAAIwtrZXm6g0htlgs2mazeVwBADC2tFaaqzeEWH6Yz+deTwIA/II0Vlrr+eBrCLFYLpdfD3Rd12632+MuAACfSlOlrdJYaa1nLyEW/ZFZ3l/mYzIzMzMz+3xpqnefgH0LMQAA/g8hBgBQorW/z8atHNvdTRsAAAAASUVORK5CYII=" InformativeScreenshot="4e4e58268ef0ab0d8720b411689b461f.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Add Account' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="334, 892, 39, 25" ElementType="Text" FriendlyName="'Age'" FullSelectorArgument="&lt;webctrl aaname='Age:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Age:' tag='LABEL' type='' check:text='Age:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACsAAAAdCAYAAAAzfpVwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFXSURBVFhH7ZT9jcMgDMVvp8wVVkHZJJ2k6hiVsoMvocQ8jB0lR7l+KE/yP5CYH342P/RBOmFb6YRtpRO2lb4BdqKx76jrHuGvcfnF0mHvI7kIGmK4xY3XSoWdLi6BhvD0DrgK7I18hHSD5wq7yxT3pfKWCS6AM1kLXX36bol+nP9GQa5iT4PlhI7G+4w+2D/jxaxYYUu31kDXDsIWcAIehQCpgvkFwjpUOjkEDvLaIVgtARyeDdpGYrB7gU2Xynuf11XXSmWwtlVrGJbJ10L0LLtlxr4BBlg4fCNUy/4dVr6tVrBl9W1wVAybEpaDtEjbx7YJgxS0d8A0ZzYKMCvCwgFWs2PlOXkOxtG7rA3Cl2YrYHH2wIJt6eZSkMgatPV/0bMsOOcRsi12VfbJsmArVQWL1iLUswZKqq6yha0i5JNWqfo2MJ48u/f/rjY920gnbCt9ECzRL3SuWS6bZVsEAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Number of Dependents'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,255.2" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="368e9c1b-882a-47d0-b51b-6aa2f527c5c7" Text="[in_No_Dependants]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/bank/account" DesignTimeRectangle="334, 649, 606, 43" ElementType="InputBox" FriendlyName="'INPUT dependents'" FullSelectorArgument="&lt;webctrl id='dependents' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='dependents' tag='INPUT' type='text' aaname='' /&gt;" Guid="5002e08d-c10a-49ab-9819-3f879a95fc56" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAmIAAAAvCAYAAABAD6Z9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIBSURBVHhe7dq7juJQFETR+f9vgxBETgAJOAHx5o6qhS2YFgntnpOsJVVgY/Kta/9pAACUEGIAAEWEGABAkW8httls2mKxaNPptE0mEzMzMzP7wdJUaas01r9eQmy5XLbZbNZWq1Xbbret6zozMzMz+8HSVGmrNFZa69kQYqm0PJA/7Pf7djgc2vF4bKfTyczMzMw+WFoqTZW2SmOltZ5PxoYQy5HZer3+evh6vbb7/W5mZmZmIyxtlcZKa6W5ekOI5f3lbrdrt9vtcQcAgLGksXIylubqDSGWj8lyhJZqAwBgXGmstFaaq/cSYpfL5XEFAMDY0lpvQyzvLwEA+B1pLSEGAFBAiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABR5G2LT6bSdz+fHFQAAY0trpbl6Q4gtFou22WweVwAAjC2tlebqDSGWH+bzudeTAAC/II2V1no++BpCLJbL5dcDXde12+32uAsAwKfSVGmrNFZa69lLiEV/ZJb3l/mYzMzMzMw+X5rq3Sdg30IMAID/obW/1tWr2GU4D1kAAAAASUVORK5CYII=" InformativeScreenshot="c3aa8fd8200d48931c8bb4c1cace23e1.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Add Account' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="334, 618, 198, 25" ElementType="Text" FriendlyName="'Number of Dependents'" FullSelectorArgument="&lt;webctrl aaname='Number of Dependents:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Number of Dependents:' tag='LABEL' type='' check:text='Number of Dependents:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMoAAAAdCAYAAADrXvM/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAPMSURBVHhe7ZbRbeswDEXfTpmrWSXoJukkRb87QYHu4GfJlnhJURSdKika8AD8cWSRvOR1+28JgmBIGCUIHIRRgsBBGCUIHIRRgsBBGCUIHIRRgsBBGCUIHJBRvq7L+XRaTilersv3/rjw/Xbefjtdlo/92aP4zdw38X7Z6+3ruXa1XF/gTBN/pFcvsF+X9/3ZXdh0Pb+1iv8E3ShKM2EULx/LBXTM8apVPTLKFvddqgfyEKOQ9g8zilzKMIoX77B8Rjmdzsv1a3/lL/O8RuHJtGX9eN3Pin8t6Ow+ZCFSfQ/fFfn7ucUXW/taD0zP68H7BkZUNGJDl/9yaWcqYBSlB9RIDp3pZ/2etBU1qQs00kvWOrxTfARSHUzz/VhiVu6B9rRDFE3dcIecmWkU/JrNMooaL2f1d6tJFpi/Ixj7MvfqUf9F2jBrKO8NhsWxjcJ+r/2JBcSAO6SRmsB8Hr2svHvQ0okPmRJVj5m5De2t2TGzwB0uo7Cv7C7qPKOU94UAZXhwtjTBGoVc+Hw729bN8ig52i+YAp6HJcP8JCzVwIbQoNQlkJo3uibqcOkZMwrcTc/LWadeYla1V9Rln8tIE3o+PzfeSdrrOpMWMP/jRmkblkNL3GIUXB518Epj+rmEOKssTaY+32vv1NND631DG8K9jNI7T89LPnUJMqI2r16YW8ya70D/XLOE03PnJ7ZR2PNjdI3CE1yWq7IstxgFnaovIORtjCIHz2v4rOd6YdfTo9dnwjcsjbZPCe+b7u3Gfk+/Xp6T7u9FWeJ+rTyX0ZPQfH7u/ETXHkxK0e6ShWGUlUGC3kBIhDBKH2OpMvB7vjuMYufOT0zt1ZyNRjq2UVZqMTV+0yhFvII42/tzLjloFL3OhDbEOUZhQ82/2+cRmpmsV9Tm1cvI3TWKXED46GbNp+fOT5zar8h6BgyNgs+3IPFxmPUddn62UdaAAbT54asLojaCHjQK6wnuVft3Dwv6NIMWifLBcim9kFHW0HSo7zv1UmZSkGdRE+of8qxxaFYHcuOdam58H3SrZw3zjI2ywhYVlxou1uMORtGiCmWfrbmNXntY93JDaMPS8Bmld3cToAEZohOwMC69lJkUrGXtRbl3fu5W03SPvT/6Psu9cBmFN49LvSLNsjZDhc02SjonBiHEy0C+LeALnLjBKJnmXlurnxlF6Aw0RrAWSNSs1jTS69CyJmRvay89zWfnFvtY+1Vmx2tecRkleBr05Q1+QhjlCQmjzCeM8oSEUeYTRnlCwijzCaMEgYMwShA4CKMEgYMwShAMWZb/WJ9ZlNeWwa8AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Add Account'" sap:VirtualizedContainerService.HintSize="333.6,194.4" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="368e9c1b-882a-47d0-b51b-6aa2f527c5c7" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/bank/account" DesignTimeRectangle="334, 711, 131, 43" ElementType="Button" FriendlyName="'Add Account'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' aaname='Add Account' check:text='Add Account' /&gt;" Guid="76fe51c6-3862-46c3-9e5d-2ae010446274" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIcAAAAvCAYAAADJqNmJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAVSSURBVHhe7ZzPa+NGFMf7FxXa/gP9B/IP9C/YS5eeeohve1tYs6ccs4dkKV2WbTcsiQohwSxmD8I1NcY47ib2JrGFMcImCvlhG/P6nkYjjZQZW9rEobbfg69B0mj0PO8zb97ooG+Ajc1gDAeb0RgONqPdgWO31IKfXvwF3//yG3z782vWEotiTLGmmOssBseLP/+GH3N/wHe/7sAP63soi7XU2vNjTTGn2CcthIPooUYMxSpqz499MoOEcFB6ERlDdzNr2UWxJwZUC+Gg9Yezxiprz2dAtRAOKlD0N7FWRcSAagwHKxTDwTKK4WAZxXCwjGI4WEYxHCyjGA6WUY8Gx7PGrejY68EzzXWjSpd40wjsXc01RS9PRtjuEt5rriX11b4sgvL/wPbJNVRszbWMeiQ4qlD0sNPxBH8mUNnXtTHoweG4hy+LoF0X6O81S5prGfU4cOwPYIh9dho96FDnzims6drp9NBw3MeXRdCiwbF5RrP0FopvbbBc6v0arFeatlstsPsUZGFe+xSeauBY23GgeUV9ok0m0KnXU8OR2pd8Daz2LXjBY2AyArftwPO80gb9LfZGMJRtxiNoNlrwNOynALliL/IVbXh1CcWPpaiP9XNo4nnvpK6c05yX4/AxPkbUn7VTUNqolm6ZNWn+cORP4YjGBtf3HB6vBX/AbVQT7VpwNKYrGOwvXbCqLjRv8LYrGggFjnc98GOKwWo2HLAaF+DiEuH5AZgxGKl9qYN95V/Cpi4clLtgIwRkw+45PKE2Wxi8wF+33QOr3IOjgCTvswgogU1ZCm6uwa5KX+nEBGe2BCQLHPh8vH/oXUCx7EAR4fX7Hw5gg9q8O8ZniGe6Z/i88vG9aqq5wyED0Kna4lxe/OlkMSiKRHXQqC0GCQGJ4CjAGyc4toLZQtpyoOPHZTocaX15UrkO2qkzvCCyzhhn6msLNr7QA7FmOVT8WC/BQR9P3wxgU4J448JLNdts4CSg6MmAZoQDXEfJTHI5VSbP4iwrutQtA6wWg7YYVBywzdj9GKgqBUr++WOo0MD2u2L2KhLLxTQ40vpiwfsuncO+1KDGVBOZhQKvvY4qXlAnEYiK5ESoHNJxNjg6ZRXG6HwIw8LAIZcApF0N5tonMXBRMRhkCE3QxSBLOMSADc+O421QuToN+BQ4UvuSIvCBH9A711wL5AdNAqC7JgOYDY47QV9UOML3CUaTs3gKHIe0u5gNh8gwZjgy+8JwzBOOf8USgDuDChZPVkLFnl8kBMXgvJeVLL5MWVZsDAQWwpWCObs8/4w1ANUl9VnLCv4ni44D0JxWvN0HEeTlhMOf8Wim9wgyzQeFWa4mZnannChI/V2DhMOC7TYFkgZWLUhxgP1dgAGOjL7oC9JSULMIaLQFqSyg/SJ0RkE6voBt/xweU7tYUVwICs2lhENf6MUlC0SAo084wCEI0daQtrLCIjhCEGgre0Jb3gF0fDDIdHA8hC9dqPRFdpHb1AjIEXTIj9Bf3HHZIluk28oWYNsJ+naVbfN4BB7enBmOtwHo3gD7+j9uZV/h1pI6SWwRk7pTDG7UwOpGL5X8FzwNdVkJ7vs98bKsj4PapmMNHF/rS/IlGL3gKtfimSf5EowgiL3g0r8EO9hX26DoWcn/vSOyUGY4MMO98ceCDMftg9I2o+aUOVjLIIaDZRTDwTKK4WAZxXCwjGI4WEYxHCyjGA6WUQwHyyiGg2UUw8EyyggHf7xl1TXl4y382afV1tTPPvEH41ZZMz4YR8afmlw1pfzUpDSih9ILrT9UoLCWVxRjinUyY0i7AwcbmzSGg81gAP8B2waqO7zfcCcAAAAASUVORK5CYII=" InformativeScreenshot="e54372a6674b3cf9519f2e4b63e517b2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Add Account' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Verification target" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="e17a9f76075a417cf7a644b90838df71.png" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Add Account'/&gt;" Url="https://acme-test.uipath.com/bank/account" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

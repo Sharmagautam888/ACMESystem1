@@ -1,0 +1,136 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Download_Selected_Invoices" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1130.4,1871.2" sap2010:WorkflowViewState.IdRef="Download_Selected_Invoices_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="42">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Download_Selected_Invoices" sap:VirtualizedContainerService.HintSize="475.2,1806.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="VendorTaxID" />
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Starting saving Selected Invoices Data in Invoices Folder with the name of selected Vendor TaxId in xlsx format&quot;]" />
+    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="433.6,295.2" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Vendor Tax ID" OptionsString="DE325476;FR065748;IT145632;RO094782;RU567434;DE325476;FR065748;IT145632;RO094782;RU567434" Title="Invoices">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[VendorTaxID]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: ACME System 1 - Search" sap:VirtualizedContainerService.HintSize="433.6,924.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="768a021e-4ab4-486c-a411-646aa192967e" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,708" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Vendor TaxID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="768a021e-4ab4-486c-a411-646aa192967e" Text="[VendorTaxID]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/invoices/search" DesignTimeRectangle="344, 460, 606, 43" ElementType="InputBox" FriendlyName="'INPUT vendorTaxID'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='' /&gt;" Guid="9b78d929-2d83-4ae6-adf1-5613665f3398" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAmIAAAAvCAYAAABAD6Z9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIBSURBVHhe7dq7juJQFETR+f9vgxBETgAJOAHx5o6qhS2YFgntnpOsJVVgY/Kta/9pAACUEGIAAEWEGABAkW8httls2mKxaNPptE0mEzMzMzP7wdJUaas01r9eQmy5XLbZbNZWq1Xbbret6zozMzMz+8HSVGmrNFZa69kQYqm0PJA/7Pf7djgc2vF4bKfTyczMzMw+WFoqTZW2SmOltZ5PxoYQy5HZer3+evh6vbb7/W5mZmZmIyxtlcZKa6W5ekOI5f3lbrdrt9vtcQcAgLGksXIylubqDSGWj8lyhJZqAwBgXGmstFaaq/cSYpfL5XEFAMDY0lpvQyzvLwEA+B1pLSEGAFBAiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABR5G2LT6bSdz+fHFQAAY0trpbl6Q4gtFou22WweVwAAjC2tlebqDSGWH+bzudeTAAC/II2V1no++BpCLJbL5dcDXde12+32uAsAwKfSVGmrNFZa69lLiEV/ZJb3l/mYzMzMzMw+X5rq3Sdg30IMAID/obW/1tWr2GU4D1kAAAAASUVORK5CYII=" InformativeScreenshot="be6ef1e52552f961802ba3762f764455.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Search' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="344, 429, 116, 25" ElementType="Text" FriendlyName="'Vendor TaxID'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' aaname='Vendor TaxID:' check:text='Vendor TaxID:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHgAAAAdCAYAAABhXag7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKoSURBVGhD7ZbrbcMwDIS7U+aqVzGySTJJkTEKdAfViiXz+JLlNGkBlQfwRxSZIu+TZL+l0NAKwIMrAA+uADy4AvDgCsCDKwAPrgA8uArgr3R5P6XTKcecbuug0C3N9/+XeL8sT/ySPi9pKuvOH2XsVfqYiwc78bT+wXfIeTvDWiqmdPksEzu0neCv67QlMY2E5l9uNCoAmzFd+yqgKxqMPJ31GaZFvRP+IgVgN3r8gHdw65qG6xnhS0Nk4wIOL9y6arCGJXI+F7CYm0NsTLqVln6wVmMDW2LPl7FV4McWOMfxEmpYT+AOYGMj4U1Lfdh5sthHFj0szIfCqslsIRbQEN4KZuA6lmk8NsDNvLS+V2PPzs+yAbfqbMG0vmGOA87St2knYDQO73jVqDmPGtjGGAjb+DoXxwgAN3Mdd04HrlV2NgPceWpRFuBtDI00DkAWgZjSfK65cFM/BpjWq7l6AZsTYUwZBwYvUs07G0ZvBr9AZR7klCdR1kW/rdfBvrw+SVB3CV6TPu3cB7vv44B9CcCGKYahtDO9KIa4MBqA5UmTOVrNif/2AbVlP6+hYshNhxtUA/sDwPLUWU3+Z8Cs9woAIErA3CtZ82OAKed+XxowW3ROs2F8t3GPAJZNSfPcnLqu5wOmOtlV6wGGWrdg/T0AGNbyNgDKAIyNUXiFU6NQbN0M3YD5mpSTv8PWHLAOgkMzd74VetUCTOZiPdinmAtgTM8swDvhrlVGs0zAeudpg/wi4Bo6AFjCtGLLoeqDgAafDxjH7Kg14rw6Rp5Vj34AmL3KjgLGB1QyEF4X9xBGHgKcJdbN+dwccu4Sos5XAM7iAPJ/UEuuATcg1oTjdxA2mDZg49vDyZPlAA6NogA8uALw4ArAgysAD64APLgC8OAKwEMrpW/xZH1rfYbMFwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="768a021e-4ab4-486c-a411-646aa192967e" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/invoices/search" DesignTimeRectangle="344, 652, 88, 43" ElementType="Button" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl id='buttonSearch' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='buttonSearch' tag='BUTTON' type='button' aaname='Search' check:text='Search' /&gt;" Guid="e53da37d-70df-40b5-ab82-2928def8c44e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFwAAAAvCAYAAABuWa03AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAARQSURBVHhe7ZvPbttGEMbzRAXSvkBewC+gJ/ClRk852LfeDMTwScfkYBtBc3DiIojZonAgBERREKwRwRBsxxGlJJIgCIRVU9Af2iC+ziyX1EqmnEY2N1W7A3wH7c4uxd8OZ2cF8R6MaTUDXLMZ4JrtGvBXbg2FR7/g2x+e4pvvd4zmELNjhsxy2iaAP3rxJx6sPcf9hz/ju9V9kmU0l/YFQ2bJTFVLgfNqsIMBfZfaF0zVSE+B8yMQR3bWQKN5xUyZbWIpcM47Jrrz0L5gm1gKnJN99gCj24rZJmaAa5ABrlkGuGYZ4JplgGuWAa5ZBrhm5QzcRbFyAX8YyZnJoghBp4Ptn0oZ/l9bx3CG9B2HPjYz+2+vHIG72OtI0FeXaLZ78EjNvmyLRnCsfxv0RQb+WxchzRV2PmFlqq9AfQFfyG9hearv62qRgbs9MZfnZvStOjg4p87oAs+U9sLLFrzkCSAL+z3Yb1xlHGmjAqsxQnAlndjoCfIOK1hKfMS1L+Ec+vDldEH9fdy3VYPduUSYXIbHntZkUIyBb//Rhc8RwxbRE1pNfG6n/IDvduDTXKHfxnoxo39Ky05PPBEY9uActWAd+fD45hHRoiXQ3XihqM1vdGAdtnBQ7cEX8COc2DJFycUWfvU2rNMu7BL1bX2CJ33j8R2cBDH54OyYxkrgbATZq9JY8om/B9AsO/J7zK/8gK+WsHk8iiGShf0BTugG9kpHWN6Y9n2HMjuet7E20ScBh10U+fOLNpoELKgyHMVPpq+0XQIPG7Vx1JOKdYYbofxa3TvkNYZdPE6BT/k8aaHJzZQC1fnmUY7AYxV23+OgPphMAWRBuzWOfMsXOT1oc0RRdCuyxcZL6eHV5LyTosglr/CjTBuZ6awCp0+NN+bnWTn87nJ77sAnVHSxXmrBoRwqrE83wBGdpoDZ5jmT86z9+kE87uW2spi0QYv+TODxoqQ+mfqvAU9VwvrZSFxLgMwElCUXzxpysdiopg+HI3h1yuP8+f8LvAKbcwTl3seZ/aTfL8S1BJTXsoRMUsIMLckxQeMDflQ34ieU27njRuCzU8r6GS3iVQ/WzgJHeLxBEZyPtamNkESlXVxtjGDvcpvcNKMBrC3V1wWl97h9x8JmlaOb8rml+pSwVhnwZJ8BPmPT3FBhLjBwcSMcUWx8nD+PT5re+bgG5qoi2fVXCJKoaLgcO5VlYVKySb8l+yL2uRqgzKUjl3V/ycnYPgN8XBZyXa2WfFR6OlzyLTJw1sZbbJ9SflV/SyETBxr77bUSa+UNAVAOPsmBppD6UO4/7I03SbGQXey9HKcwUT7OAs6aPvgMB3DSw9WiAze6JgNcswxwzTLANcsA1ywDXLMMcM0ywDXLANcsA1yzDHDNygRu/pCfl2b8Id+8cpKPZr5yYl6qykM3vFTFZl4bvCv9g9cGE+PV4EeA8w4ne6MvF7NjhmpkJ3YNuLF8zQDXasDfcXQLvmS8oYUAAAAASUVORK5CYII=" InformativeScreenshot="2430a90c7277dcae10a52427f49048e0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Search' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Invoice Number' ReferenceIdx='0' Name='Invoice Number'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Vendor Tax ID' ReferenceIdx='1' Name='Vendor Tax ID'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Invoice Item' ReferenceIdx='2' Name='Invoice Item'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Total' ReferenceIdx='3' Name='Total'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Date' ReferenceIdx='4' Name='Date'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Invoice Number' attr='text' /&gt;&lt;column name='Vendor Tax ID' attr='text' /&gt;&lt;column name='Invoice Item' attr='text' /&gt;&lt;column name='Total' attr='text' /&gt;&lt;column name='Date' attr='text' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="768a021e-4ab4-486c-a411-646aa192967e" Version="V1">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="335, 454, 1248, 370" FriendlyName="'Invoice Number'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="69491060-6878-4560-800b-a907868b729b" InformativeScreenshot="5060c27ea1a8f1cc006df8cbcb30e83d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Search Results' /&gt;" SearchSteps="Selector" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="2cd7868524296b7cda3e1fb04c022ccb.png" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Search'/&gt;" Url="https://acme-test.uipath.com/invoices/search" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:WriteCsvFile Encoding="{x:Null}" AddHeaders="True" DataTable="[ExtractDataTable]" Delimitator="Comma" DisplayName="Write CSV" FilePath="[&quot;Invoices\&quot; + VendorTaxID + &quot;.csv&quot;]" sap:VirtualizedContainerService.HintSize="433.6,155.2" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="433.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Your File is saved at: &quot; + Environment.CurrentDirectory + &quot;\Invoices\&quot; + VendorTaxID + &quot;.csv&quot;]" />
+  </Sequence>
+</Activity>

@@ -1,0 +1,370 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="National_Insurance_Planning" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1130.4,4651.2" sap2010:WorkflowViewState.IdRef="National_Insurance_Planning_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="56">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="40">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="National_Insurance_Planning" sap:VirtualizedContainerService.HintSize="550.4,4586.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="DataTable" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="508.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started NIP data filing project&quot;]" />
+    <ui:ReadCsvFile Encoding="{x:Null}" DataTable="[DataTable]" Delimitator="Comma" DisplayName="Read CSV" FilePath="HealthCare\Treatment Report.csv" sap:VirtualizedContainerService.HintSize="508.8,155.2" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="508.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Read data from Treatement Repot.csv&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ACME System 1 - National Insurance Planning" sap:VirtualizedContainerService.HintSize="508.8,3907.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="276cad8f-9b7b-4ea6-924a-6e218a1e6481" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="475.2,3690.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Starting data entry in Healthcare NIP&quot;]" />
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="433.6,3463.2" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,3340.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Social Number'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,255.2" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="276cad8f-9b7b-4ea6-924a-6e218a1e6481" Text="[CurrentRow(&quot;Social Number&quot;).ToString]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/medical/insurance" DesignTimeRectangle="334, 460, 606, 43" ElementType="InputBox" FriendlyName="'INPUT social_number'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='' /&gt;" Guid="59e13727-0f03-4d7b-b412-09d8766704e6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAmIAAAAvCAYAAABAD6Z9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIBSURBVHhe7dq7juJQFETR+f9vgxBETgAJOAHx5o6qhS2YFgntnpOsJVVgY/Kta/9pAACUEGIAAEWEGABAkW8httls2mKxaNPptE0mEzMzMzP7wdJUaas01r9eQmy5XLbZbNZWq1Xbbret6zozMzMz+8HSVGmrNFZa69kQYqm0PJA/7Pf7djgc2vF4bKfTyczMzMw+WFoqTZW2SmOltZ5PxoYQy5HZer3+evh6vbb7/W5mZmZmIyxtlcZKa6W5ekOI5f3lbrdrt9vtcQcAgLGksXIylubqDSGWj8lyhJZqAwBgXGmstFaaq/cSYpfL5XEFAMDY0lpvQyzvLwEA+B1pLSEGAFBAiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABR5G2LT6bSdz+fHFQAAY0trpbl6Q4gtFou22WweVwAAjC2tlebqDSGWH+bzudeTAAC/II2V1no++BpCLJbL5dcDXde12+32uAsAwKfSVGmrNFZa69lLiEV/ZJb3l/mYzMzMzMw+X5rq3Sdg30IMAID/obW/1tWr2GU4D1kAAAAASUVORK5CYII=" InformativeScreenshot="0421b6a4d032f83ebd73221e10f4a2a3.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="FuzzySelector, Image">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="334, 429, 128, 25" ElementType="Text" FriendlyName="'Social Number'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' aaname='Social Number:' check:text='Social Number:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIQAAAAdCAYAAABrLcQsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAK2SURBVGhD7ZZtTsMwEES5U89FrlJxk/QkqMdA6h2MXRx7xjtOQh0KEvuk/UHq2PvxkvASHAdwIRzChXAIF8IhXAiHcCEcwoVwCBfCIawQ7+dwOp2aOIdr/vnH+JjDlM87v+dreyk5T2H+yNcE17dakz3jGs75t+lyy9eexEjtB0NCYMNsrDd7mCcLcXqdA4/dhUhUISCpbpgm/hEeESIGD96FSFQh4FPRJlUbKRpuPjGdoQjh6JxuU+qgajSfsAeF4H2sELfLJNZFRK/K3umhaWo1a+4Beza1d9cBbS2txJjPtdSR163MWgqx903QJoVBCRppxDophJJhCWjUw0LEeFt2OUgIGVOYXsX1pc/iYeHAum5hVnulKLX08sn77BKie1CnybApDr8mstwHQy2i4Vm52UKIMhAUVBXzXSHoqbF5jgpR+gHrMLe61tZONeD13IOaE6wT9ct8FlQPM/RPJTZFBd6MzeXjmsZ2hnUvDO+VbwjECjsixA1rbf4eEwLXwhnw9Jp8ofZ2eJwD9AD3g+vL/TqfbRohFrbeFr3EEs1vO4elhejl8RVjQkRgsNNlPkYIekCsZHdWhKi1Z2gtCNaLPA+dzzYdIRqocWn75whRLY8hhjgsBOYK4UJQY8QrBhLePrBpghpg4n4dBmiaUnPSzTxCiAjWluM3haB1kX2fDMugEHjwetghcBElkTIcsBqSM+tWhKj38RN9iBCRmstXlHpkjfyUHi0E1YDXswB1Tnrdej4ZqKv0MAOfDG62jI1GYtBBkICJxXRR1Jak5YxBIXBwKcrwaFA61gfwiBAqsC7OlQLOPkCITGd47Y0Fs74zFFE0NUkIkWDpOq/NYSFYvl5e5V7R0KOESPvZmi28JkbzCVmr9XtCOP8aF8IhXAiHcCEcwoVwCBfCIVwIh3AhHCCET5XARnR3Q3ydAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <uix:NTypeInto.VerifyOptions>
+                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        </uix:VerifyExecutionTypeIntoOptions>
+                      </uix:NTypeInto.VerifyOptions>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'First Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,255.2" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="276cad8f-9b7b-4ea6-924a-6e218a1e6481" Text="[CurrentRow(&quot;first_name&quot;).ToString]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/medical/insurance" DesignTimeRectangle="334, 553, 606, 43" ElementType="InputBox" FriendlyName="'INPUT firstname'" FullSelectorArgument="&lt;webctrl id='firstname' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='firstname' tag='INPUT' type='text' aaname='' /&gt;" Guid="d60d42d1-e43d-4cf0-bee0-8d9d5ee08056" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAmIAAAAvCAYAAABAD6Z9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIBSURBVHhe7dq7juJQFETR+f9vgxBETgAJOAHx5o6qhS2YFgntnpOsJVVgY/Kta/9pAACUEGIAAEWEGABAkW8httls2mKxaNPptE0mEzMzMzP7wdJUaas01r9eQmy5XLbZbNZWq1Xbbret6zozMzMz+8HSVGmrNFZa69kQYqm0PJA/7Pf7djgc2vF4bKfTyczMzMw+WFoqTZW2SmOltZ5PxoYQy5HZer3+evh6vbb7/W5mZmZmIyxtlcZKa6W5ekOI5f3lbrdrt9vtcQcAgLGksXIylubqDSGWj8lyhJZqAwBgXGmstFaaq/cSYpfL5XEFAMDY0lpvQyzvLwEA+B1pLSEGAFBAiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQ5G2ITafTdj6fH1cAAIwtrZXm6g0htlgs2mazeVwBADC2tFaaqzeEWH6Yz+deTwIA/II0Vlrr+eBrCLFYLpdfD3Rd12632+MuAACfSlOlrdJYaa1nLyEW/ZFZ3l/mYzIzMzMz+3xpqnefgH0LMQAA/g8hBgBQorW/z8atHNvdTRsAAAAASUVORK5CYII=" InformativeScreenshot="5d45fb2ca1f19c22e97848ff93e65f4a.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="FuzzySelector, Image">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="334, 522, 96, 25" ElementType="Text" FriendlyName="'First Name'" FullSelectorArgument="&lt;webctrl aaname='First Name:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='First Name:' tag='LABEL' type='' check:text='First Name:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGQAAAAdCAYAAABcz8ldAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIQSURBVGhD7ZVhkoMgDIX3Tp6rXsXpTexJOh6jM70DiwrkQYLdVuxmt3kz74eAIeSL+OVMqmRAlMmAKJMBUSYDokwGRJkMiDIZEGUiILfR9V3nui2fp3XtdQhjvRtv61Ab3d146lx/uYfnitL+kBNoOoe50+gj/i0pAjK5IezzFBAhh88DcoheBeJdFP7fARmuYawm9oVgMafl2qnNkwc/GlQWOLiah7Ae19aA3C89ey+DX9QgxZkdYxWNy5tnvXbTe97sHJB/OdccSOblEJW5xQFKAyAIWAIiwYhORX10S5x6cZ7yrJ81A/csENHYbZtAijudrfWCvShRisG7rhDGvPJYHAjFpgJAJ4vdHwEXHR+vbeEM9EVRc1AjyDfC8UDK/wxsniXF9CIQvz8VonjGnFFZTrBObBQsKjQVglrOXMtfaoa6mgPhxeR3qrzudSD47pznKAEpIaAFIFg8sctLII/q5/3wXF4H/NRrm0LRwLTXHiBYNLBQ6NnrnttX1gcAQQnF2AkkixkdY6f1lYK2APJ0DWQdDkS+f/0b7Ae4F4hXGg9mQOBsuLYJEOlMXlKuUj5Bb/hCaE4yrecdXs1DOmQQFcVb+PpENwKC7zPHNbN+F8iqrFDBbB9IdHb1S9kAkhUlAfEqirXELuPsBbKINxY7x4+AmFTIgCiTAVEmA6JMBkSZDIgyGRBlMiCq5Nw3KxhzI+YjcHoAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <uix:NTypeInto.VerifyOptions>
+                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        </uix:VerifyExecutionTypeIntoOptions>
+                      </uix:NTypeInto.VerifyOptions>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Last Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,255.2" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="276cad8f-9b7b-4ea6-924a-6e218a1e6481" Text="[CurrentRow(&quot;last_name&quot;).ToString]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/medical/insurance" DesignTimeRectangle="334, 645, 606, 43" ElementType="InputBox" FriendlyName="'INPUT lastname'" FullSelectorArgument="&lt;webctrl id='lastname' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='lastname' tag='INPUT' type='text' aaname='' /&gt;" Guid="78e9807b-c6e4-4eb8-82de-52de1bf51264" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAmIAAAAvCAYAAABAD6Z9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIBSURBVHhe7dq7juJQFETR+f9vgxBETgAJOAHx5o6qhS2YFgntnpOsJVVgY/Kta/9pAACUEGIAAEWEGABAkW8httls2mKxaNPptE0mEzMzMzP7wdJUaas01r9eQmy5XLbZbNZWq1Xbbret6zozMzMz+8HSVGmrNFZa69kQYqm0PJA/7Pf7djgc2vF4bKfTyczMzMw+WFoqTZW2SmOltZ5PxoYQy5HZer3+evh6vbb7/W5mZmZmIyxtlcZKa6W5ekOI5f3lbrdrt9vtcQcAgLGksXIylubqDSGWj8lyhJZqAwBgXGmstFaaq/cSYpfL5XEFAMDY0lpvQyzvLwEA+B1pLSEGAFBAiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABR5G2LT6bSdz+fHFQAAY0trpbl6Q4gtFou22WweVwAAjC2tlebqDSGWH+bzudeTAAC/II2V1no++BpCLJbL5dcDXde12+32uAsAwKfSVGmrNFZa69lLiEV/ZJb3l/mYzMzMzMw+X5rq3Sdg30IMAID/obW/1tWr2GU4D1kAAAAASUVORK5CYII=" InformativeScreenshot="71d158bb1694dee40070e8347c24478b.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="FuzzySelector, Image">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="334, 614, 94, 25" ElementType="Text" FriendlyName="'Last Name'" FullSelectorArgument="&lt;webctrl aaname='Last Name:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Last Name:' tag='LABEL' type='' check:text='Last Name:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGIAAAAdCAYAAABR0bkaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIqSURBVGhD7ZThjcMgDIVvp8zVrFJ1k3SSqmNU6g4coYCfjWkjEt35dH6SfyQQY7/P4Su4TMhBGJGDMCIHYUQOwogchBE5CCNyEEZEIB5LmKcpTDHOt/zuB/W8zmE6LeGZn1Xdzqm+FJd7fkm6X/LapzwGZQLEZgMRxDSH5ZHfZzmInRoD0e7/nyBgf8+YeOGE5ST2sEm+hzNby6FcO0kSRAystQciXXviu/kKO0TvNc8aJZfol32f1Pba+Aj1y7UxEBqEEtUEDUKJAmM/iGk6xywvaSA0CCWqme/6WeM0q+vkU6ePGAzY0SBqw2AYNZxNVvNBwfDt5iulNhLPuFH+0mybh86jGmBA1GkvYMUglXphb3MuDAX5Qe+O/yOY5DS0IPh11GoIRMxHBojnXh75RykgcIKb4UoCQAkO9c+mH95v8XMQhDQfg4omoyCUa2cUBKsjfrtoeaT5GAoI7F2dagmCDZweHJCuARD6L6tPzyqxPwcWNw4Cz4VQDF7j1RfU87dB6L9cHwQX/SXU3B4QzJgSJU/d3zHyCBDgxxbDe1JB9GMtCK6Des3gVZVNgivhE7B9IKLgLJZHqwH3HgJCHy61Vq2erAEQeLAW5WBlUjEqRGy4XWPSmstiNVWgOCBKHATirXfYy9EgGpNTQ/ov2pgs1l8ShlUjhd6AYPXj96KvdLbMsxdEUjt4TZ+bQLh+VQ7CiByEETkII3IQRuQgjMhBGJGDMKEQvgFVzbTir8E59gAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <uix:NTypeInto.VerifyOptions>
+                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        </uix:VerifyExecutionTypeIntoOptions>
+                      </uix:NTypeInto.VerifyOptions>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,255.2" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="276cad8f-9b7b-4ea6-924a-6e218a1e6481" Text="[CurrentRow(&quot;email&quot;).ToString]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/medical/insurance" DesignTimeRectangle="334, 738, 606, 43" ElementType="InputBox" FriendlyName="'INPUT email'" FullSelectorArgument="&lt;webctrl id='email' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='email' tag='INPUT' type='text' aaname='' /&gt;" Guid="d250f003-7f8f-43f3-8d31-d97d487e220c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAmIAAAAvCAYAAABAD6Z9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIBSURBVHhe7dq7juJQFETR+f9vgxBETgAJOAHx5o6qhS2YFgntnpOsJVVgY/Kta/9pAACUEGIAAEWEGABAkW8httls2mKxaNPptE0mEzMzMzP7wdJUaas01r9eQmy5XLbZbNZWq1Xbbret6zozMzMz+8HSVGmrNFZa69kQYqm0PJA/7Pf7djgc2vF4bKfTyczMzMw+WFoqTZW2SmOltZ5PxoYQy5HZer3+evh6vbb7/W5mZmZmIyxtlcZKa6W5ekOI5f3lbrdrt9vtcQcAgLGksXIylubqDSGWj8lyhJZqAwBgXGmstFaaq/cSYpfL5XEFAMDY0lpvQyzvLwEA+B1pLSEGAFBAiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQ5G2ITafTdj6fH1cAAIwtrZXm6g0htlgs2mazeVwBADC2tFaaqzeEWH6Yz+deTwIA/II0Vlrr+eBrCLFYLpdfD3Rd12632+MuAACfSlOlrdJYaa1nLyEW/ZFZ3l/mYzIzMzMz+3xpqnefgH0LMQAA/g8hBgBQorW/z8atHNvdTRsAAAAASUVORK5CYII=" InformativeScreenshot="081a827c1b0e9183ab576128a5893f86.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="FuzzySelector, Image">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="334, 707, 53, 25" ElementType="Text" FriendlyName="'Email'" FullSelectorArgument="&lt;webctrl aaname='Email:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Email:' tag='LABEL' type='' check:text='Email:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADkAAAAdCAYAAAAQJcSlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEFSURBVFhH7ZVhDoMgDIV3J84lVyHeRE9iPIaJd+iCdrUwEBaZbpWXvB9WWN9HMXvADVQhpahCSlGFlKKbQU4daKVAJWwGXH+GWCbqOxjMoqGbsJZQhQz5VMiQSkHmgIwtgjcdzN4BvfbTmsUGxrVMct+vdnpnT3IEg+tU63cpARm0Bt0E6vZAMvZT/29CRh0JqXusUgDrLcS2FqdJvRJBfweSX8NIs8R3NPca33t7syH3dRyS1TgkTdcqEOwNjPsMSPrBHR2CpGdWC92Cf4akKUb2XntdrTFAEUgW1Lm+H0MGDojpEshkLxGQTm21hdim6f/VlIIUrAopRRVSiiqkFN0AEuAJ3nLnMRlP1c0AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <uix:NTypeInto.VerifyOptions>
+                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        </uix:VerifyExecutionTypeIntoOptions>
+                      </uix:NTypeInto.VerifyOptions>
+                    </uix:NTypeInto>
+                    <uix:NSelectItem DisplayName="Select Item 'Gender'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[CurrentRow(&quot;gender&quot;).ToString]" ScopeIdentifier="276cad8f-9b7b-4ea6-924a-6e218a1e6481" Version="V1">
+                      <uix:NSelectItem.Items>
+                        <scg:List x:TypeArguments="x:String" Capacity="2">
+                          <x:String>Female</x:String>
+                          <x:String>Male</x:String>
+                        </scg:List>
+                      </uix:NSelectItem.Items>
+                      <uix:NSelectItem.Target>
+                        <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/medical/insurance" DesignTimeRectangle="334, 341, 606, 43" ElementType="DropDown" FriendlyName="'Female'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' aaname='' /&gt;" Guid="a58c854a-ae45-48bc-a51e-ad951ee94fda" InformativeScreenshot="a5a5b9a65d086e6e520924b0b09fba85.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="FuzzySelector">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="334, 310, 67, 25" ElementType="Text" FriendlyName="'Gender'" FullSelectorArgument="&lt;webctrl aaname='Gender:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Gender:' tag='LABEL' type='' check:text='Gender:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEcAAAAdCAYAAAD4pXGOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGlSURBVGhD7ZbdrcMgDEbvTpmrWSXqJukkVcaolB24ofx92NglvdHlxUfyQwkBfLCj/jhDxOQomBwFk6NgchRMjoLJUTA5Cm05r9XN0+QmEvNjjxNGsLnln8/B5Gx3LqWO5TjmCAbL2R8zESHEfYSekXJIKy3POB6pxZHqYW1Iq2t36y0+82KfC8xtJ1tXsF9PkgNrx6jPju9tMHd26wvzCr+RLAeTp2ISYQ5JnCRaAjfjCdAoCZ+ZWxI/Pee2Hjt1ysk3FV/qAzbOrUaqhI4dkeVjxaV9QbYkLI2X6ioXVpJNYyiHC/ibHKEy3gnmZ2ThPJ4OCMmR9em+rYTfgMggB9ulWjGPh0toXWAfXE5n2/iNsRXbkaS1qikgyqGXRGUIfzcwdImf+fzNMTkeKD9pITiQ2laML+R83VaUS+T0VEKKJAOEQtL89vvlVJWa58L7R6QkmyLZhelyuj7IibKhFPWNakJLe56QQ0S0IieptVbe50I5AagIiOpbhLBD0o3OyAnUl+TXk5LkMuvnl8sxPCZHweQomBwFk6NgchRMjoLJEXHuF88zqKutkniSAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NSelectItem.Target>
+                    </uix:NSelectItem>
+                    <uix:NSelectItem DisplayName="Select Item 'Care type'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="[CurrentRow(&quot;Care type&quot;).ToString]" ScopeIdentifier="276cad8f-9b7b-4ea6-924a-6e218a1e6481" Version="V1">
+                      <uix:NSelectItem.Items>
+                        <scg:List x:TypeArguments="x:String" Capacity="3">
+                          <x:String>Routine</x:String>
+                          <x:String>Emergency</x:String>
+                          <x:String>Urgent</x:String>
+                        </scg:List>
+                      </uix:NSelectItem.Items>
+                      <uix:NSelectItem.Target>
+                        <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/medical/insurance" DesignTimeRectangle="334, 434, 606, 43" ElementType="DropDown" FriendlyName="'Routine'" FullSelectorArgument="&lt;webctrl id='care_type' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='care_type' tag='SELECT' type='' aaname='' /&gt;" Guid="c390b234-8879-4dbf-9a38-4cff59c6ee2b" InformativeScreenshot="86aa20c77f78f03487efae8e65b0e08c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="FuzzySelector">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="334, 403, 86, 25" ElementType="Text" FriendlyName="'Care type'" FullSelectorArgument="&lt;webctrl aaname='Care type:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Care type:' tag='LABEL' type='' check:text='Care type:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFoAAAAdCAYAAAAq9XvWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAI0SURBVGhD7ZVtbsIwDIZ3p55ovyd6lYo7cIByEsQxkLhDVtI0ef2RtKVbgMqvZGkLSWw/dtwvZ6oiA11JBrqSDHQlGehKMtCVZKAryUBXkg760rmmaagdencPP7+Prq4bYusu4d83FgN9d/2BASbWuv4Wtr5at961Ia6PA309crCadUMfvYE+FjQELjt3fKITbJIYORcMxwwBgvdAwfiomhlT93NL93v7dj/h7/bMTye//jcSE3/FeiPxJiz5aI7yhgg6BZ8ZDyG4WciTTbBye0IwOrSH5V+OfqZ1p1NY54WKhQy5leL2hgwK45QAXQg6VmzFRy+egYtFwUhSDB78ljqEdV9OcDYWP67RZhG5kZhgL66LRoB9vHBe/wiaChx5k6A5uJQELUBcL8WigYbuKxZucUzQzQSe5qesjaA5XDQJmn+0os+s5cdH7l5RpNh9cFchJtqtpfyCKd2racOMZrMr99Qqg07ro//oA4G8EjQ6l7Cpw/G5pDUMdg1o+kxXqnBvgtupMeLZ50bHeiXQg+Y77GETFIAfg8CCzIPWE16YXOne2JWTsULCWdJUuB58qy9d9a3xSCKgSZIZw6TKhVkAelD+DkhMFX1ldD/7jSdOQGtWuAuNfM9WgQ4SHTGY+pFkhfF7kkPfpTOgveY6MKPUbfJ+LKDwy2KixdZ9i4YQMJ8BvQMlMAq4JcX/Y+0TNI4GpbsM9FYhYG+ZOW+gN4qBzkI00PuVga4kA11JBrqKnPsFsHB9J5KyJCQAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NSelectItem.Target>
+                    </uix:NSelectItem>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Diagnosis Code'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,255.2" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="276cad8f-9b7b-4ea6-924a-6e218a1e6481" Text="[CurrentRow(&quot;Diagnosis Code&quot;).ToString]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/medical/insurance" DesignTimeRectangle="334, 276, 606, 43" ElementType="InputBox" FriendlyName="'INPUT diagnosis_code'" FullSelectorArgument="&lt;webctrl id='diagnosis_code' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='diagnosis_code' tag='INPUT' type='text' aaname='' /&gt;" Guid="7a848ee2-0406-4f00-be67-d21053d5b6b5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAmIAAAAvCAYAAABAD6Z9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIBSURBVHhe7dq7juJQFETR+f9vgxBETgAJOAHx5o6qhS2YFgntnpOsJVVgY/Kta/9pAACUEGIAAEWEGABAkW8httls2mKxaNPptE0mEzMzMzP7wdJUaas01r9eQmy5XLbZbNZWq1Xbbret6zozMzMz+8HSVGmrNFZa69kQYqm0PJA/7Pf7djgc2vF4bKfTyczMzMw+WFoqTZW2SmOltZ5PxoYQy5HZer3+evh6vbb7/W5mZmZmIyxtlcZKa6W5ekOI5f3lbrdrt9vtcQcAgLGksXIylubqDSGWj8lyhJZqAwBgXGmstFaaq/cSYpfL5XEFAMDY0lpvQyzvLwEA+B1pLSEGAFBAiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABR5G2LT6bSdz+fHFQAAY0trpbl6Q4gtFou22WweVwAAjC2tlebqDSGWH+bzudeTAAC/II2V1no++BpCLJbL5dcDXde12+32uAsAwKfSVGmrNFZa69lLiEV/ZJb3l/mYzMzMzMw+X5rq3Sdg30IMAID/obW/1tWr2GU4D1kAAAAASUVORK5CYII=" InformativeScreenshot="540bea42eea59a3d12be8d7857e678b7.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="FuzzySelector, Image">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="334, 245, 138, 25" ElementType="Text" FriendlyName="'Diagnosis Code'" FullSelectorArgument="&lt;webctrl aaname='Diagnosis Code:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Diagnosis Code:' tag='LABEL' type='' check:text='Diagnosis Code:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAI4AAAAdCAYAAAB8D1TlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMlSURBVHhe7ZbrbeswDIW7U+aqVwm6STpJkTEKdAdVtiXx8CHG1nUb94IfwB+RZVE6PKLzkoJggDBOMEQYJxgijBMMEcYJhgjjBEOEcYIhwjjBEGScz1uaLpd06cXbvUwEPq7l+ZRun2XsfwI0uX6UsUP4SrdX0PZHchR+6AzbjbPENTH7hHH20zTrhHVB/4VzGCfH6y3fl2CIjRpP7wcq/JvG0Qnu6Vqese7S6Thf71MZpzDFYLdvXeP+Vn5Xg4p9tefwjoTPyWGaHc9UQ3TUniZW19jQKdi+xHymmdqv8Wkz84l58zq9M8D4GuLsGdqT1nmjcTLwvJnAMI5lmhpoHm/eEoZx7MBDWWaosXUeCGhp4n1qXPNAzs68xVjSNO75sdjemdZ4fAZukGOMg26uB1fGoc3TGvBeEwUOCUKZt44JR0Lh3GpIutEdk9Q1DcNjnmZwQ5OWw9y3FrjxUF8L7CC2oWstUA9an5tpHYexZmCjtplfNI5AOlsVTuYyTGYVdIEEWMflb0Duk+1Lt+iGZ5w5QOSHjBjHeYeKOu/fupwFqbXUotLGHT2A443DiiLCu/EFdaO7+xJG8favnsFZIJThrDVhjKJzcRBvfz0cnfgzozYVkRc7kx0bzpI59j+OEFUV6TTGqUDbhmhzvDXbGTC82wq5Op1qOTt2jL9vHH5D23N5sPYbBfSMI3MZczcUfTWy/A14BWjsyS2AeSo34H3meEGLfk7+wz9VOzGN44Z3IyxDwBi9C7cP1mPiPSyeNgoVBkXRuSgPF4/e7xWuVyDI0ekmCxs1JvNBPryMuE7Jh9rR+7CvHOsZ7L2qTp/p6TSz0zhiAeVevlEVPZO0mNI03HH4mA7sgv4+23pWbrwIKrTACvf9HMyQGa8uPfN2op7B1p7PmTnGONZNUsbJiHWWIljzZpiIa2GV83cZZ4V9EuaQxSioeTlYjg25KdCYj8BOQsFzIMZ8s7PJeXlPvTOoemtzbDPOSbBaZnA+nmMcdHun3couEpyLJ3Ucu1VT6NYYnIunfqqs/xj7/isEz+J0/3GCv0EYJxgijBMMEcYJBkjpG1erLkyH82G3AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <uix:NTypeInto.VerifyOptions>
+                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        </uix:VerifyExecutionTypeIntoOptions>
+                      </uix:NTypeInto.VerifyOptions>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Diagnosis Description'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,255.2" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="276cad8f-9b7b-4ea6-924a-6e218a1e6481" Text="[CurrentRow(&quot;Diagnosis Description&quot;).ToString]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/medical/insurance" DesignTimeRectangle="334, 369, 606, 68" ElementType="InputBox" FriendlyName="'TEXTAREA diagnosis_desc…'" FullSelectorArgument="&lt;webctrl tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TEXTAREA' type='text' aaname='' /&gt;" Guid="ed6e3f36-aa79-419b-8c3b-74fa0eb5129e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAmIAAABICAYAAABV/pmfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKvSURBVHhe7dqxUuJQGIbhvVou1BpKnPQU2gCNjILi2flYkgEVdleBv3mema9ICP07J/nVAAAoIcQAAIoIMQCAIp9CbD6ft67r2mQyaePx2MzMzMx+sDRV2iqN9dFRiM1mszadTtvDw0NbLBZtuVyamZmZ2Q+WpkpbpbHSWoeGEEul5YH8YbVatefn5/by8tLW67WZmZmZfWNpqTRV2iqNldY6PBkbQixHZo+Pj7uH397e2vv7u5mZmZldYGmrNFZaK83VG0Is7y+fnp7adrvd3wEA4FLSWDkZS3P1hhDLx2Q5Qku1AQBwWWmstFaaq3cUYq+vr/srAAAuLa11MsTy/hIAgOtIawkxAIACQgwAoIgQAwAoIsQAAIoIMQCAIkIMAKCIEAMAKCLEAACKCDEAgCJCDACgiBADACgixAAAiggxAIAiQgwAoIgQAwAoIsQAAIoIMQCAIkIMAKCIEAMAKCLEAACKCDEAgCJCDACgiBADACgixAAAiggxAIAiQgwAoIgQAwAoIsQAAIoIMQCAIkIMAKCIEAMAKCLEAACKCDEAgCJCDACgiBADACgixAAAiggxAIAiQgwAoIgQAwAoIsQAAIoIMQCAIkIMAKCIEAMAKCLEAACKCDEAgCJCDACgiBADALiR0Wi0W0+IAQDcQB9hQgwA4Ib6ALu7u9vf+UOIAQBc0akICyEGAHAl5yIshBgAwBV8FWH9vZ4QAwC4sHMRJsQAAK7kXIR9fEV5MsQmk0nbbDb7KwAA/uZ/IizSWmmu3hBiXde1+Xy+vwIA4F8kuj766l6ktdJcvSHE8sP9/b3XkwAAV5DGSmsdHnwNIRaz2Wz3wHK5bNvtdn8XAIDvSlOlrdJYaa1DRyEW/ZFZ3l/mYzIzMzMz+/7SVKc+AfsUYgAA3IYQAwAo0dpvlvS42mspWtAAAAAASUVORK5CYII=" InformativeScreenshot="c9342e148b4a27b2db4e94bf4031a5fb.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="FuzzySelector, Image">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="334, 338, 191, 25" ElementType="Text" FriendlyName="'Diagnosis Description'" FullSelectorArgument="&lt;webctrl aaname='Diagnosis Description:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Diagnosis Description:' tag='LABEL' type='' check:text='Diagnosis Description:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMMAAAAdCAYAAAAXS9j1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAP+SURBVHhe7ZfrceMwDISvp9QVt+JJJ04lGZeRmfSgEyU+lsAComLnLOfwzeBHJIoEFljJ+TMFQbAQZgiCTJghCDJhhiDIhBmCIBNmCIJMmCEIMmGGIMg0M3xeptPLy/Rixds1LwQ+zvn+abp85mu/CdDk/JGv3cD1DfRU8Qwafk2X15wvm4chrtN5fh71rLq8XuYTHse4GZY4z6UAYYZd+GZY4/T+yHHY4kYzGHo+qRnmeHDCz8yIGVLcw3iH5M4vl3tDzaATXT9ta7PgK2B8Gb7eT/l6C/rGq8+3PdRbQuTVDxT/IqmhowbGmkqIL5+lSZd3joE3pfcG7DSTe8nztp7Pwb8yuu5uXVczrk3a6C9DO3e+D8/imgTLz+w5sNnLXfMB9ZB+DZphBu5X8YgZeNFroOjeuiVK0VJgFVgwG/ASo+vAEEwTZoQSG4bwmp5ojWw52DqNrLEHXUXJ3Vqz3PfMYESula/zzDDYy+/Ox01mIEJoM7TD2h7wXC0WkgIBOsHK9a5YPgCl4W2YDAHKnsTEeE4dIKIJa1zLBc/VbJlB5cVygnrWa/x3vDYWrAMdlWaG3isbZjB6WWeB6Jlguqi8FkgvjXzZfHTP/7wZBPItWgqA6/1ZxDh0IBJyKOTfgMyzy0s2HCCatCbNQQT1YE3vEHm2hvY51uvLPjjkpPaC1d/lTNjf1DvhmUHOAJkXIwety45eDs/HNvc3QzdoIpQZpIBEGDMvUayXv7rXD1AJJRrbE6610HUw9pqhMx6NPMRUc2FyTx/EXeeZQb9URns53vMZec9c+5NmgPt1cznUsKbtAwIexgyFtgdGXePtOTKAgi0ztOFf92l/W9Gfhz8NaowMGOKuCzPM9G/Sel8Odf0bhfHMIM8ia4eLdYp3zNfYc7YA1nnCu2ZAc+X73qBtIjW2cszXa31uzZ4ZpLZ6rbW31mVHL81872QGN7CRMjHZgARpMiaK+3VvtnJ9R7HtTYqN0WdZDWzP5+FTZxPDLMAZpfGEtr8ftU44vzVUDplxtnoWngNzoebLuabeCc8Mcxi9ZPXg3uwlMdpLO189H6ZWmZ1m6IdHmQEPY2GI1eI0neSwfbdYFfh29fOs+7Gz0dwqhD6CITOIJtnPtLO4liWgbq/Hm3onNszAAnqudV9rYGbwe8Rr+ndmIA9rM8yIfZZE2LpEN1hrgUqYXcWuqAHqRG6wQevOGDi7BZqNYw92CsdIyoDkLNY/WjfJHXtr1pzwzJByEnuTmZHmSWdwM6xs9nLXfEB+rhkOgidMcDx6Mzw3jzEDvsW6oWduDo5MmOFm8J85Fs5PhuBQhBnuBP8N/fyi/k+EGYLgFxJmCIJMmCEIMmGGIFiYpr8YOmotWWj6DwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <uix:NTypeInto.VerifyOptions>
+                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        </uix:VerifyExecutionTypeIntoOptions>
+                      </uix:NTypeInto.VerifyOptions>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Procedure Code'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,255.2" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="276cad8f-9b7b-4ea6-924a-6e218a1e6481" Text="[CurrentRow(&quot;Procedure Code&quot;).ToString]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/medical/insurance" DesignTimeRectangle="334, 486, 606, 43" ElementType="InputBox" FriendlyName="'INPUT procedure_code'" FullSelectorArgument="&lt;webctrl id='procedure_code' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='procedure_code' tag='INPUT' type='text' aaname='' /&gt;" Guid="f6ec2357-3100-42e4-ae2c-a88125e1c00e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAmIAAAAvCAYAAABAD6Z9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIBSURBVHhe7dq7juJQFETR+f9vgxBETgAJOAHx5o6qhS2YFgntnpOsJVVgY/Kta/9pAACUEGIAAEWEGABAkW8httls2mKxaNPptE0mEzMzMzP7wdJUaas01r9eQmy5XLbZbNZWq1Xbbret6zozMzMz+8HSVGmrNFZa69kQYqm0PJA/7Pf7djgc2vF4bKfTyczMzMw+WFoqTZW2SmOltZ5PxoYQy5HZer3+evh6vbb7/W5mZmZmIyxtlcZKa6W5ekOI5f3lbrdrt9vtcQcAgLGksXIylubqDSGWj8lyhJZqAwBgXGmstFaaq/cSYpfL5XEFAMDY0lpvQyzvLwEA+B1pLSEGAFBAiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABR5G2LT6bSdz+fHFQAAY0trpbl6Q4gtFou22WweVwAAjC2tlebqDSGWH+bzudeTAAC/II2V1no++BpCLJbL5dcDXde12+32uAsAwKfSVGmrNFZa69lLiEV/ZJb3l/mYzMzMzMw+X5rq3Sdg30IMAID/obW/1tWr2GU4D1kAAAAASUVORK5CYII=" InformativeScreenshot="6e33bcc6e0a44bdd53a5dc0d0694c2f5.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="FuzzySelector, Image">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="334, 455, 141, 25" ElementType="Text" FriendlyName="'Procedure Code'" FullSelectorArgument="&lt;webctrl aaname='Procedure Code:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Procedure Code:' tag='LABEL' type='' check:text='Procedure Code:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJEAAAAdCAYAAACqqo6AAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALcSURBVHhe7ZaBbeswDES7U+ZqVgm6STpJkTEKZAdVlmzxRJGMYja/CT4fQKC1ZZE8nuy8pSBwEiYK3ISJAjdhosBNmChwEyYK3ISJAjdhosANmej7nI6HQzpo8X5O13XpywG9nb7Wa0/DNZ3fmdaPqvNBOsybqMQpXdblL8WzmujrxPRl8fHLaj+HiQ7p+PmC76NnNNFf6P0vTTQmuKTTem87HZeP9f/8mbt8HuvfObDptmYL7ZMoCCo1yfeTBWafhyUn703tdezz2nrLb2F8c7S3xPg5mhlQ1wt741DOHFyzSa2mdNgY9hy/OFTTMZ2/14srfhN1sSWA9UOwIoxXOplE/t1QohuAlbdG6W2Xifqoz+n57DfImIdT9GUG0mopsUeHBVX/fk53m8iKTRw0EReM7mFCaKyJI11Dw9QTITbQmqdrKDKZoxfUZSI2cOqTTi6tN34/mgdWAecDdUg9T+sg9JufJv3FPF4TwcmQBKxQYcNp5IMXjLBQCpZM1Q2Rrtc8sI6dYDxtRbxdJuLiaX3S9X5vYIeJqA6uN9fnDh0U/em6cRCAeRN1AwQT8UItgfg9rYkOGKwWXDxW65BXrdEyERP0ll45hkO0YWmkoOqd6e/N60C9aWHNhZj8TTQSJqI9tFBNJOThFH1B2//LRCDQ/OeM5SzXtwYMUTpgHa+J5/kNE1l9TtD0g1wb/XBrXr0Ors8dOvB57OQBJkKBsDgYUHtGujY+TwLCfkK9KD4NFnK0tbfy5rhpIlwP92YHA/Vb0frA9WA67NmlA+wpzVacwcpDTMQL7oMNA07HEK0xY78uv5W3Ru0NTqsWEyYyjQBDUbF6X4Jpi+bg0b8NZ3Ww90Qf/IGJKt3JttYKw5A+EcN+4qC4QfLwxd74ukWc8WSaJiqMhpRq15ENrc5A0EpeO6tDZthzNMqciYJgJ2GiwE2YKHATJgrchIkCN2GiwE2YKHATJgqcpPQDyjK9Wy3/+7YAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <uix:NTypeInto.VerifyOptions>
+                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        </uix:VerifyExecutionTypeIntoOptions>
+                      </uix:NTypeInto.VerifyOptions>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Procedure Description'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,255.2" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="276cad8f-9b7b-4ea6-924a-6e218a1e6481" Text="[CurrentRow(&quot;Procedure Description&quot;).ToString]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/medical/insurance" DesignTimeRectangle="334, 579, 606, 68" ElementType="InputBox" FriendlyName="'TEXTAREA procedure_desc…'" FullSelectorArgument="&lt;webctrl id='procedure_description' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl id='procedure_description' tag='TEXTAREA' type='text' aaname='' /&gt;" Guid="61a97fb6-46b9-481a-9b46-efdcf3809c79" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAmIAAABICAYAAABV/pmfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKvSURBVHhe7dqxUuJQGIbhvVou1BpKnPQU2gCNjILi2flYkgEVdleBv3mema9ICP07J/nVAAAoIcQAAIoIMQCAIp9CbD6ft67r2mQyaePx2MzMzMx+sDRV2iqN9dFRiM1mszadTtvDw0NbLBZtuVyamZmZ2Q+WpkpbpbHSWoeGEEul5YH8YbVatefn5/by8tLW67WZmZmZfWNpqTRV2iqNldY6PBkbQixHZo+Pj7uH397e2vv7u5mZmZldYGmrNFZaK83VG0Is7y+fnp7adrvd3wEA4FLSWDkZS3P1hhDLx2Q5Qku1AQBwWWmstFaaq3cUYq+vr/srAAAuLa11MsTy/hIAgOtIawkxAIACQgwAoIgQAwAoIsQAAIoIMQCAIkIMAKCIEAMAKCLEAACKCDEAgCJCDACgiBADACgixAAAiggxAIAiQgwAoIgQAwAoIsQAAIoIMQCAIkIMAKCIEAMAKCLEAACKCDEAgCJCDACgiBADACgixAAAiggxAIAiQgwAoIgQAwAoIsQAAIoIMQCAIkIMAKCIEAMAKCLEAACKCDEAgCJCDACgiBADACgixAAAiggxAIAiQgwAoIgQAwAoIsQAAIoIMQCAIkIMAKCIEAMAKCLEAACKCDEAgCJCDACgiBADALiR0Wi0W0+IAQDcQB9hQgwA4Ib6ALu7u9vf+UOIAQBc0akICyEGAHAl5yIshBgAwBV8FWH9vZ4QAwC4sHMRJsQAAK7kXIR9fEV5MsQmk0nbbDb7KwAA/uZ/IizSWmmu3hBiXde1+Xy+vwIA4F8kuj766l6ktdJcvSHE8sP9/b3XkwAAV5DGSmsdHnwNIRaz2Wz3wHK5bNvtdn8XAIDvSlOlrdJYaa1DRyEW/ZFZ3l/mYzIzMzMz+/7SVKc+AfsUYgAA3IYQAwAo0dpvlvS42mspWtAAAAAASUVORK5CYII=" InformativeScreenshot="2af4261308654eb6ae787dc72eeddb5a.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="FuzzySelector, Image">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="334, 547, 194, 25" ElementType="Text" FriendlyName="'Procedure Description'" FullSelectorArgument="&lt;webctrl aaname='Procedure Description:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Procedure Description:' tag='LABEL' type='' check:text='Procedure Description:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMYAAAAdCAYAAADxYhOxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAPKSURBVHhe7VbRbeswDHw7Za6XVYJukk5SZIwC3cHPsmzpSB5pNc5Dk4IH8KOSLJLHO6V/pkQiYZDGSCQI0hiJBEEaI5EgSGMkEgRpjESCII2RSBCkMRIJgjRGIkHQjfF5nc6n03Ty4u91+lqPvhygt8vHuvbDuL0pfkWcp+vnevBZ8QhOPy7z95fptv5Z0Hj5Yb2NG2MJ2cTL4OWMUeP8/sRP0UFOv97Pa5+/whhPPiwPL2qMEs9S76PhGeNZQI1hh3GbLuve6a22gc6+tSalcczwvVeAmJIJQt/HTfo1Xf/CuZJT9+b2avsUA1x++uW+yTfHiJijl7HnnKPlqRjhQHwfnBP9snOCJzw7c0E4FFzpmQZ8LbHy4PNCvlPc6LlKrvS/p3bWiOPGELElt4TbMytQbCr6kBwyS4imorw1lt7cXm2fTGQl6nd+Pi7EjsgYBZ3f7UUd48Crt4QnehPbfd6Zsk84jHIvsfR6hzGiWvEXJzxXArVnZ424+18pNIYWQd9zCmlNszUkrjbdCYf7mqH6Gg6mC16K95AxFIFWvHgeBkZABYBQ/Y1xANxBrbZOy3GBmZvQhOqHcCi4gr7YXDyeLC+8VlHb1qtTL+bvWn2kMaBZJoqKntC8mnqQRNwFSyOMGNFAX6954JwWW8tzxBiyRr/Pvi7vlvieMe7goK0ReP0vObn4zF3kDp8rW/+wMdxZkTvcegNNOhg3hnKVO9igEbPnGEMCxOrFUpsnnhk6r1tjZAz1AOzxNUc0hO8ZY5QD/A7Dr93MCBGdI3suVzN0v8PGiDSi9wbmesgYIVkr0hj9Di+OGKPtL3m/YYwVvW6ILVc0I0R0juylMWb4gw2K0I20v1XOZX0jIhC8AJzTNek8AwTuGuMOshGhMaDeuj/KgYOgf1H7ut44iTRB9jpXWsS2/mFjBDWYO9yzT2EM2BMEgejaN2zNfk8JDweDBECOdnYv7xy7xsDzsNdEqMUhIXIFYXuLOIC+0EBwrvICQoXakb/lvkgTO/wjr+ZesbZjDKdWzN96devtvFBdkMfmvxhDJDWhBIavo45WcHCfyB/lrVF7Q7KdGDCGGI4OQjZiyBjijjEOhDhNOMLSsd0XaYLsxbnnwFnpua97VFcjtRa49XbuftgYFWb43lnSOPvJM/dR8WnRz2Kgvelz5SW2ZIXGWGBNxmrXiI3h/9oMccCERLknZsP7Ik2QPcmVutvUSeY0r/q6Io+ZvtOt94gxEomD2H9EXgdpjMTDkMZIJAjSGIkEQRojkfjlSGMkEgRpjETCYJr+ASoJ+R5oqhdGAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <uix:NTypeInto.VerifyOptions>
+                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        </uix:VerifyExecutionTypeIntoOptions>
+                      </uix:NTypeInto.VerifyOptions>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Medication'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,255.2" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="276cad8f-9b7b-4ea6-924a-6e218a1e6481" Text="[CurrentRow(&quot;Medication&quot;).ToString]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/medical/insurance" DesignTimeRectangle="334, 696, 606, 68" ElementType="InputBox" FriendlyName="'TEXTAREA medication'" FullSelectorArgument="&lt;webctrl id='medication' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl id='medication' tag='TEXTAREA' type='text' aaname='' /&gt;" Guid="f637300c-7c72-41e5-b183-fb449d182b10" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAmIAAABICAYAAABV/pmfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKvSURBVHhe7dqxUuJQGIbhvVou1BpKnPQU2gCNjILi2flYkgEVdleBv3mema9ICP07J/nVAAAoIcQAAIoIMQCAIp9CbD6ft67r2mQyaePx2MzMzMx+sDRV2iqN9dFRiM1mszadTtvDw0NbLBZtuVyamZmZ2Q+WpkpbpbHSWoeGEEul5YH8YbVatefn5/by8tLW67WZmZmZfWNpqTRV2iqNldY6PBkbQixHZo+Pj7uH397e2vv7u5mZmZldYGmrNFZaK83VG0Is7y+fnp7adrvd3wEA4FLSWDkZS3P1hhDLx2Q5Qku1AQBwWWmstFaaq3cUYq+vr/srAAAuLa11MsTy/hIAgOtIawkxAIACQgwAoIgQAwAoIsQAAIoIMQCAIkIMAKCIEAMAKCLEAACKCDEAgCJCDACgiBADACgixAAAiggxAIAiQgwAoIgQAwAoIsQAAIoIMQCAIkIMAKCIEAMAKCLEAACKCDEAgCJCDACgiBADACgixAAAiggxAIAiQgwAoIgQAwAoIsQAAIoIMQCAIkIMAKCIEAMAKCLEAACKCDEAgCJCDACgiBADACgixAAAiggxAIAiQgwAoIgQAwAoIsQAAIoIMQCAIkIMAKCIEAMAKCLEAACKCDEAgCJCDACgiBADACgixAAAbmQ0Gu3WE2IAADfQR5gQAwC4oT7A7u7u9nf+EGIAAFd0KsJCiAEAXMm5CAshBgBwBV9FWH+vJ8QAAC7sXIQJMQCAKzkXYR9fUZ4Msclk0jabzf4KAIC/+Z8Ii7RWmqs3hFjXdW0+n++vAAD4F4muj766F2mtNFdvCLH8cH9/7/UkAMAVpLHSWocHX0OIxWw22z2wXC7bdrvd3wUA4LvSVGmrNFZa69BRiEV/ZJb3l/mYzMzMzMy+vzTVqU/APoUYAAC30Npv+ya3lh1o0SsAAAAASUVORK5CYII=" InformativeScreenshot="7a0f4f39f1941ccaadfed49c79ce73b6.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="FuzzySelector, Image">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="334, 665, 97, 25" ElementType="Text" FriendlyName="'Medication'" FullSelectorArgument="&lt;webctrl aaname='Medication:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Medication:' tag='LABEL' type='' check:text='Medication:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGUAAAAdCAYAAACzDaJjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJmSURBVGhD7ZWNjYMwDIVvJ+Yqq6BuApNUHaNSd8gRk58X24mAXnuulCdZOi4hfvYX0x/XZU4dikF1KAbVoRhUh2JQHYpBdSgG1aEYVIZym9wwDDmu97CQdb/C+hrj8gwrrymde5kdnfiY3RhyTDfa8hY9lzHnJD3dfAlelPo/pTqUYXKlrbubivXvhiJyksxDGd38CGte0KgYb4PyAf1Hzr1SoIxuDLcFm06j7tevU5qYAoqAxictiMH3k3BkUtLeGEpTk1eI7FVOPAVNRmNSlEspphh6OD/gLArWD+gDP0eFMi/h71RwTjAus4TCGp2jnDatWUU0ofAiMXLBrRyb3+NQmr4RXrUPMQDMYSi32JTY1FiIf85FiSKTQa042Ae3uyi4AQX3pSKgMO5FhQl5d/+m4IRUQGl+1FyVvdnrJh0KjB69kNY8aQaleG87ilS8g8/chNI0AUWD7LV54UUlQc7i/FV7oeTms8+P5qlWozr5dVWggOk1If4dG+GfPZTmaFMEWOx8lGjQbiiKOAiME1D0fZvEWq3Gv4KCz/GHfzvQMBR4T33366GwAnOinZ8vrrSPG1Oa1oKiNTGCSjnwU/MalHOfr3dBwaQ+knkGBZ7xFsuiYR8UWExa3KsUgftSYXhxfG4NPPzvDBSRI0j1cwSK5jWoAYU1LBniUNg+FpiwtY+iAaVomIjoGcErAQCEF6pPgbKq5Tv2gPQJKPqLEgoJbxQFMxYFZ8YzxK1VoWxKe1OwzwrzQR7VZjGAlFuHQhL1SW96nlWnoXSZUYdiUB2KQXUoBtWhGFSHYlAdikF1KObk3C+L/H/10KigagAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <uix:NTypeInto.VerifyOptions>
+                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        </uix:VerifyExecutionTypeIntoOptions>
+                      </uix:NTypeInto.VerifyOptions>
+                    </uix:NTypeInto>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Save Details'" sap:VirtualizedContainerService.HintSize="333.6,194.4" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="276cad8f-9b7b-4ea6-924a-6e218a1e6481" Version="V1">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/medical/insurance" DesignTimeRectangle="334, 783, 131, 43" ElementType="Button" FriendlyName="'Save Details'" FullSelectorArgument="&lt;webctrl id='buttonScoreCard' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='buttonScoreCard' tag='BUTTON' type='button' aaname='Save Details' check:text='Save Details' /&gt;" Guid="1699cf70-797c-4f6f-af2a-6727d9ad26c1" ImageBase64="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" InformativeScreenshot="331fb6bdf29e43bf7a73512478f15954.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="FuzzySelector, Image" />
+                      </uix:NClick.Target>
+                      <uix:NClick.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="Verification target" Mode="Appears">
+                          <uix:VerifyExecutionOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionOptions.Retry>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NClick.VerifyOptions>
+                    </uix:NClick>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="373bcb4d09f9862cb8a232480eb4ada8.png" Selector="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning'/&gt;" Url="https://acme-test.uipath.com/medical/insurance" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="508.8,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;This Project took Data from this Excel file: &quot;+ Environment.CurrentDirectory +&quot;\HealthCare\Treatment Report.csv and posted the data in NIP web page&quot;]" />
+  </Sequence>
+</Activity>
